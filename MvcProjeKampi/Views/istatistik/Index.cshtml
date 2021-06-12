@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>İstatistikler</h2>
+<div class="row">
+    <div class="col-lg-6 col-6" style="text-align: center">
+        <div class="small-box bg-info">
+            <h1 style="color:black">@ViewBag.value1</h1>
+            <p class="small-box bg-gradient-info" style="color:white">Toplam kategori sayısı</p>
+        </div>
+    </div>
+    <div class="col-lg-6 col-6" style="text-align: center">
+        <div class="small-box bg-success">
+            <h1 style="color:black">@ViewBag.value2</h1>
+            <p class="small-box bg-gradient-success" style="color:white">Başlık tablosunda "yazılım" kategorisine ait başlık sayısı</p>
+        </div>
+    </div>
+    <div class="col-lg-6 col-6" style="text-align: center">
+        <div class="small-box bg-warning">
+            <h1 style="color:black">@ViewBag.value3</h1>
+            <p class="small-box bg-gradient-warning" style="color:white">Yazar adında 'a' harfi geçen yazar sayısı</p>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-6" style="text-align: center">
+        <div class="small-box bg-danger">
+            <h1 style="color:black">@ViewBag.value4</h1>
+            <p class="small-box bg-gradient-danger" style="color:white">En fazla başlığa sahip kategori adı</p>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-6" style="text-align: center">
+        <div class="small-box bg-gray">
+            <h1 style="color:black">@ViewBag.value5</h1>
+            <p class="small-box bg-gradient-gray" style="color:white">Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark</p>
+        </div>
+    </div>
+</div>
+
+
+
