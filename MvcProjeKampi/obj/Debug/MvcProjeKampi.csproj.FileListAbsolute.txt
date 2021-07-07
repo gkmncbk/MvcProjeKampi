@@ -525,6 +525,8 @@ C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\Fluent
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\Newtonsoft.Json.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Web.Helpers.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Web.Mvc.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Web.Optimization.dll
@@ -542,6 +544,8 @@ C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\Entity
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.SqlServer.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\FluentValidation.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Web.Helpers.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Web.Mvc.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\MvcProjeKampi\bin\System.Web.Optimization.xml

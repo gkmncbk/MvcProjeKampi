@@ -14,6 +14,7 @@ namespace MvcProjeKampi.Controllers
         ContactManager cm = new ContactManager(new EfContactDal());
         MessageManager mm = new MessageManager(new EfMessageDal());
         ContactValidator cv = new ContactValidator();
+        WriterManager vm = new WriterManager(new EfWriterDal());
         // GET: Contact
         public ActionResult Index()
         {
@@ -32,17 +33,22 @@ namespace MvcProjeKampi.Controllers
         }
         public PartialViewResult MessageListMenu()
         {
+            string p = (string)Session["WriterMail"];
+            //string p = "admin@gmail.com";
+            var writeridinfo = vm.GetByWriterId(p);
             ViewBag.ContactCount = cm.GetList().Count;
             ViewBag.ContactReadCount = cm.GetList().Where(x => x.ContactReadStatus == true).Count();
             ViewBag.ContactNotReadCount = cm.GetList().Where(x => x.ContactReadStatus == false).Count();
 
-            ViewBag.MessageInboxCount = mm.GetListInbox().Count;
-            ViewBag.MessageReadCount = mm.GetListInbox().Where(x => x.MessageReadStatus==true).Count();
-            ViewBag.MessageNotReadCount = mm.GetListInbox().Where(x => x.MessageReadStatus == false).Count();
-            ViewBag.MessageSendboxCount = mm.GetListSendbox().Count;
-            ViewBag.MessageDraftboxCount = mm.GetListDraftbox().Count;
+            ViewBag.MessageInboxCount = mm.GetListInbox(p,"").Count;
+            ViewBag.MessageReadCount = mm.GetListInbox(p,"").Where(x => x.MessageReadStatus==true).Count();
+            ViewBag.MessageNotReadCount = mm.GetListInbox(p,"").Where(x => x.MessageReadStatus == false).Count();
+            ViewBag.MessageSendboxCount = mm.GetListSendbox(p,"").Count;
+            ViewBag.MessageDraftboxCount = mm.GetListDraftbox(p, "").Count;
 
             return PartialView();
         }
+
+
     }
 }

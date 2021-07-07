@@ -11,5 +11,8 @@ namespace DataAccessLayer.Abstract
     {
         Admin GetByAdmin(string k, string p);
         string[] GetRolesForAdmin(string username);
+
+        List<Admin> GetListAdmin();
+        //Admin GetAdmin(int id);
     }
 }

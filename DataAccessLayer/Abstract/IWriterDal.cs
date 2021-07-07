@@ -9,5 +9,7 @@ namespace DataAccessLayer.Abstract
 {
    public interface IWriterDal : IRepository<Writer>
     {
+        //Writer GetByWriter(string mail, string password);
+        int GetByWriterId(string mail);
     }
 }

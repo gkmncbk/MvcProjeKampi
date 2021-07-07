@@ -24,20 +24,20 @@ namespace BusinessLayer.Concrete
             return _messageDal.Get(x => x.MessageID == id);
         }
 
-        public List<Message> GetListInbox()
+        public List<Message> GetListInbox(string p, string k)
         {
-            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
+            return _messageDal.List(x => x.ReceiverMail == p && (x.MessageContent.Contains(k)||x.Subject.Contains(k)||x.SenderMail.Contains(k)));
 
             //return _messageDal.List();
         }
-        public List<Message> GetListSendbox()
+        public List<Message> GetListSendbox(string p, string k)
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com"&&x.MessageDraftsStatus==false);
+            return _messageDal.List(x => x.SenderMail ==p && x.MessageDraftsStatus==false && (x.MessageContent.Contains(k) || x.Subject.Contains(k) || x.ReceiverMail.Contains(k)));
 
         }
-        public List<Message> GetListDraftbox()
+        public List<Message> GetListDraftbox(string p, string k)
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com" && x.MessageDraftsStatus == true);
+            return _messageDal.List(x => x.SenderMail == p && x.MessageDraftsStatus == true && (x.MessageContent.Contains(k) || x.Subject.Contains(k) || x.ReceiverMail.Contains(k)));
 
         }
         public void MessageAdd(Message message)

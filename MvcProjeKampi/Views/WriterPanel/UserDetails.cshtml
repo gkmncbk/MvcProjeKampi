@@ -1,0 +1,13 @@
+﻿@model EntityLayer.Concrete.Writer
+<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+        @* <img src="~/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">*@
+        <img class="img-circle elevation-2" alt="User Image" src="@Model.WriterImage">
+       
+    </div>
+    <div class="info">
+        <a href="#" class="d-block">Yazar Paneli</a>
+        <a href="#">@Model.WriterName @Model.WriterSurName</a>
+    </div>
+</div>
+

@@ -55,17 +55,18 @@
     <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICapabilityDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IChartDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IRoleDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
+    <Compile Include="Concrete\ChartDal.cs" />
     <Compile Include="Concrete\Context.cs" />
-    <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
-    <Compile Include="Concrete\Repositories\WriterRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
     <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfCapabilityDal.cs" />
@@ -75,48 +76,9 @@
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfRoleDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="EntityFramework\Interface1.cs" />
-    <Compile Include="Migrations\202106060125260_mig_contact_adddate.cs" />
-    <Compile Include="Migrations\202106060125260_mig_contact_adddate.designer.cs">
-      <DependentUpon>202106060125260_mig_contact_adddate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106072345572_mig_addimage_file.cs" />
-    <Compile Include="Migrations\202106072345572_mig_addimage_file.designer.cs">
-      <DependentUpon>202106072345572_mig_addimage_file.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106082226117_mig_messagereadstatus.cs" />
-    <Compile Include="Migrations\202106082226117_mig_messagereadstatus.designer.cs">
-      <DependentUpon>202106082226117_mig_messagereadstatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106082252262_mig_admin_table.cs" />
-    <Compile Include="Migrations\202106082252262_mig_admin_table.designer.cs">
-      <DependentUpon>202106082252262_mig_admin_table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106090130270_mig_contact_ReadStatus.cs" />
-    <Compile Include="Migrations\202106090130270_mig_contact_ReadStatus.designer.cs">
-      <DependentUpon>202106090130270_mig_contact_ReadStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106091919237_mig_AboutStatusAdd.cs" />
-    <Compile Include="Migrations\202106091919237_mig_AboutStatusAdd.designer.cs">
-      <DependentUpon>202106091919237_mig_AboutStatusAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106100212426_mig_MessageDraftStatusAdd.cs" />
-    <Compile Include="Migrations\202106100212426_mig_MessageDraftStatusAdd.designer.cs">
-      <DependentUpon>202106100212426_mig_MessageDraftStatusAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106102300099_mig_Capability_add.cs" />
-    <Compile Include="Migrations\202106102300099_mig_Capability_add.designer.cs">
-      <DependentUpon>202106102300099_mig_Capability_add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106102316080_mig_Capability_update.cs" />
-    <Compile Include="Migrations\202106102316080_mig_Capability_update.designer.cs">
-      <DependentUpon>202106102316080_mig_Capability_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106110001226_mig_Capability_CapabilityNameLeng.cs" />
-    <Compile Include="Migrations\202106110001226_mig_Capability_CapabilityNameLeng.designer.cs">
-      <DependentUpon>202106110001226_mig_Capability_CapabilityNameLeng.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -129,38 +91,6 @@
       <Project>{4bdc6bab-44c1-41ad-84f3-407e800a91b3}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106060125260_mig_contact_adddate.resx">
-      <DependentUpon>202106060125260_mig_contact_adddate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106072345572_mig_addimage_file.resx">
-      <DependentUpon>202106072345572_mig_addimage_file.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106082226117_mig_messagereadstatus.resx">
-      <DependentUpon>202106082226117_mig_messagereadstatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106082252262_mig_admin_table.resx">
-      <DependentUpon>202106082252262_mig_admin_table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106090130270_mig_contact_ReadStatus.resx">
-      <DependentUpon>202106090130270_mig_contact_ReadStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106091919237_mig_AboutStatusAdd.resx">
-      <DependentUpon>202106091919237_mig_AboutStatusAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106100212426_mig_MessageDraftStatusAdd.resx">
-      <DependentUpon>202106100212426_mig_MessageDraftStatusAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106102300099_mig_Capability_add.resx">
-      <DependentUpon>202106102300099_mig_Capability_add.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106102316080_mig_Capability_update.resx">
-      <DependentUpon>202106102316080_mig_Capability_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106110001226_mig_Capability_CapabilityNameLeng.resx">
-      <DependentUpon>202106110001226_mig_Capability_CapabilityNameLeng.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

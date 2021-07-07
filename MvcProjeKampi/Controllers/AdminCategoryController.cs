@@ -14,19 +14,21 @@ using System.Web.Mvc;
 
 namespace MvcProjeKampi.Controllers
 {
-      
+
     public class AdminCategoryController : Controller
     {
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
         [Authorize(Roles = "B")]
-        public ActionResult Index()
+        public ActionResult Index(string s = "")
         {
+            ViewBag.AddCategoryName = s;
             var categoryvalues = cm.GetList();
             return View(categoryvalues);
+
         }
         [HttpGet]
         public ActionResult AddCategory()
-        {
+        {           
             return View();
         }
         [HttpPost]
@@ -37,15 +39,19 @@ namespace MvcProjeKampi.Controllers
             if (result.IsValid)
             {
                 cm.CategoryAdd(p);
-                return RedirectToAction("Index");
+
+                return RedirectToAction("Index", "AdminCategory", new { s = p.CategoryName });
+
             }
             else
             {
+
                 foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
+            
             return View();
         }
         public ActionResult DeleteCategory(int id)

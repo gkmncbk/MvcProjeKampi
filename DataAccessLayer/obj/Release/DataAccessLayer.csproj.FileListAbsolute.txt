@@ -1,0 +1,16 @@
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\EntityFramework.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\EntityLayer.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\EntityLayer.pdb
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\EntityLayer.dll.config
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\EntityFramework.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Release\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Release\DataAccessLayer.csproj.CopyComplete
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\DataAccessLayer\obj\Release\DataAccessLayer.pdb

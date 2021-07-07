@@ -1,0 +1,32 @@
+﻿@using EntityLayer.Concrete
+@model List<Capability>
+@{
+    ViewBag.Title = "ActionCapability";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Yetenek Adı</th>
+        <th>Yetenek Seviyesi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CapabilityID</td>
+            <td>@item.CapabilityName</td>
+            <td>@item.CapabilityLevel</td>
+            <td><a href="/Capability/DeleteCapability/@item.CapabilityID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Capability/EditCapability/@item.CapabilityID" class="btn btn-warning">Güncelle</a></td>
+
+        </tr>
+    }
+
+</table>
+

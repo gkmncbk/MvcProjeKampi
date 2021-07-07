@@ -7,12 +7,15 @@ using System.Web.Mvc;
 
 namespace MvcProjeKampi.Controllers
 {
+    [AllowAnonymous]
     public class istatistikController : Controller
     {
-        Context c = new Context();
+
         // GET: istatistik
+        Context c = new Context();
         public ActionResult Index()
         {
+           
             ViewBag.value1 = c.Categories.Count().ToString();
             ViewBag.value2 = c.Headings.Where(x => x.Category.CategoryID == 7).Count().ToString();
             ViewBag.value3 = c.Writers.Where(x => x.WriterName.Contains("a")).Count().ToString();

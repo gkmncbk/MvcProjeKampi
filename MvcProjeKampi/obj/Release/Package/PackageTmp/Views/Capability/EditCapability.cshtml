@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Capability
+
+@{
+    ViewBag.Title = "EditCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yetenek Güncelleme Sayfası</h1>
+<br />
+@using (Html.BeginForm("EditCapability", "Capability", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.CapabilityID)
+    @Html.HiddenFor(x => x.CapabilityStatus)
+
+    @Html.Label("Yetenek Adı")
+    @Html.TextBoxFor(x => x.CapabilityName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CapabilityName)
+    <br />
+    <br />
+    @Html.Label("Yetenek Seviyesi (0-100)")
+    @Html.TextBoxFor(x => x.CapabilityLevel, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CapabilityLevel)
+    <br />
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</div>
+}
+
+

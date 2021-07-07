@@ -1,0 +1,13 @@
+﻿@{
+        ViewBag.Title = "ImageUpload";
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+
+        <h1>Resim Yükleme Sayfası</h1>
+
+    <br /> 
+    <form action="/Gallery/ImageUpload" method="post" enctype="multipart/form-data">
+        <input type="file" accept='image/*' name="uploadfile" id="uploadfile" />
+        <br />
+        <input type="submit" value="Gönder" />
+    </form>

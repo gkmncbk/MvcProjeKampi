@@ -217,6 +217,7 @@ C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\EntityLayer.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\Newtonsoft.Json.dll
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\EntityLayer.pdb
@@ -224,6 +225,7 @@ C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\EntityFramework.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\FluentValidation.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\bin\Debug\Newtonsoft.Json.xml
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.dll

@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -20,18 +21,32 @@ namespace BusinessLayer.Concrete
 
         public void AdminAdd(Admin admin)
         {
-            throw new NotImplementedException();
+            admin.AdminUserName = lm.Encrypt(admin.AdminUserName);
+            admin.AdminPassword = lm.PasswordHash(admin.AdminPassword);
+            _adminDal.Insert(admin);
         }
 
         public void AdminDelete(Admin admin)
         {
-            throw new NotImplementedException();
+            admin.AdminUserName = lm.Encrypt(admin.AdminUserName);
+            //admin.AdminPassword = lm.PasswordHash(admin.AdminPassword);
+            _adminDal.Delete(admin);
         }
 
         public void AdminUpdate(Admin admin)
         {
-            throw new NotImplementedException();
+            admin.AdminUserName = lm.Encrypt(admin.AdminUserName);
+            //admin.AdminPassword = lm.PasswordHash(admin.AdminPassword);
+            _adminDal.Update(admin);
         }
+
+        //public Admin GetAdmin(int id)
+        //{
+           
+        //    var adm = _adminDal.GetAdmin(id);
+        //    adm.AdminUserName = lm.Decrypt(adm.AdminUserName);                       
+        //    return adm;
+        //}
 
         public Admin GetByAdmin(string k, string p)
         {
@@ -40,12 +55,34 @@ namespace BusinessLayer.Concrete
 
         public Admin GetByID(int id)
         {
-            throw new NotImplementedException();
-        }
+            var adm = _adminDal.Get(x => x.AdminID == id);
+            adm.AdminUserName = lm.Decrypt(adm.AdminUserName);
+            return adm;
+            //return _adminDal.Get(x => x.AdminID == id);
 
-        public List<Admin> GetList()
+        }
+        LoginManager lm = new LoginManager();
+
+        public List<Admin> GetListAdmin()
         {
-            throw new NotImplementedException();
+            //var adm=_adminDal.List();
+
+            List<Admin> lst = (from p in _adminDal.List(x=>x.AdminStatus==true)
+
+                               select new Admin
+                               {
+
+                                   AdminID = p.AdminID,
+                                   AdminUserName =lm.Decrypt(p.AdminUserName),
+                                   AdminPassword = p.AdminPassword,
+                                   RoleID = p.RoleID,
+
+                               }).ToList();
+
+
+            return lst;
+
+
         }
 
         public string[] GetRolesForAdmin(string username)

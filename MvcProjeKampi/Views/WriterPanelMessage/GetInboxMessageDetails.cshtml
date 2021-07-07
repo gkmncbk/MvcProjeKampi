@@ -1,0 +1,84 @@
+﻿@model EntityLayer.Concrete.Message
+@{
+    ViewBag.Title = "GetInboxMessageDetails";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Gelen Mesaj Detayları</h1>
+                </div>
+            </div><!-- /.container-fluid -->
+        </div>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            @Html.Action("MessageListMenu", "WriterPanelMessage")
+
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title">Mesajı Oku</h3>
+                        <div class="card-tools">
+                            <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Önceki Mesaj"><i class="fas fa-chevron-left"></i></a>
+                            <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Sonraki Mesaj"><i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+
+                    <div class="card-body p-0">
+                        <div class="mailbox-read-info">
+                            <h5>Konu: @Html.DisplayFor(x => x.Subject)</h5>
+                            <br />
+                            <h6>
+                                Mail: @Html.DisplayFor(x => x.SenderMail)
+                                <span class="mailbox-read-time float-right"> @(((DateTime)Model.MessageDate).ToString("dd-MMM-yyyy"))</span>
+                            </h6>
+                        </div>
+                        <!-- /.mailbox-read-info -->
+                        <!-- /.mailbox-controls -->
+                        <div class="mailbox-read-message">
+                            <p id="MessageContent"></p>
+                            @*<p>@Html.DisplayFor(x => x.MessageContent)</p>*@
+                        </div>
+                        <!-- /.mailbox-read-message -->
+                        @*</div>*@
+                        <div class="card-footer">
+                            <div class="float-right">
+                                <button type="button" class="btn btn-default"><i class="fas fa-reply"></i> Cevapla</button>
+                                <button type="button" class="btn btn-default"><i class="fas fa-share"></i> İlet</button>
+                            </div>
+                            <button type="button" class="btn btn-default"><i class="far fa-trash-alt"></i> Sil</button>
+                            <button type="button" class="btn btn-default"><i class="fas fa-print"></i> Yazdır</button>
+                        </div>
+                        <!-- /.card-footer -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        var value =@Html.Raw(Json.Encode(Model.MessageContent))
+
+            $(document).ready(function () {
+
+                $('#MessageContent').html(value)
+
+                    });
+    </script>
+</body>
+</html>
+

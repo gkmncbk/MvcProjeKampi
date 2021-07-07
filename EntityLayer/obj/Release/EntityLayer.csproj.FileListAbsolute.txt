@@ -1,0 +1,13 @@
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\EntityLayer.dll.config
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\EntityLayer.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\EntityLayer.pdb
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\EntityFramework.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\EntityFramework.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\bin\Release\Newtonsoft.Json.xml
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\obj\Release\EntityLayer.csprojAssemblyReference.cache
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\obj\Release\EntityLayer.csproj.CopyComplete
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\obj\Release\EntityLayer.dll
+C:\Users\CABUK\source\repos\MvcProjeKampi\MvcProjeKampi\EntityLayer\obj\Release\EntityLayer.pdb

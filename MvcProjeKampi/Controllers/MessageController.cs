@@ -16,22 +16,29 @@ namespace MvcProjeKampi.Controllers
     {
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator messageValidator = new MessageValidator();
-
+        WriterManager vm = new WriterManager(new EfWriterDal());
         // GET: Message
         [Authorize]
         public ActionResult Inbox()
         {
-            var messagelist = mm.GetListInbox();
+            string p = (string)Session["WriterMail"];
+            var writeridinfo = vm.GetByWriterId(p);
+            //var Writeridinfo = vm.GetByWriterId(p);
+            var messagelist = mm.GetListInbox(p,"");
             return View(messagelist);
         }
         public ActionResult Sendbox()
         {
-            var messagelist = mm.GetListSendbox();
+            string p = (string)Session["WriterMail"];
+            var writeridinfo = vm.GetByWriterId(p);
+            var messagelist = mm.GetListSendbox(p, "");
             return View(messagelist);
         }
         public ActionResult Draftbox()
         {
-            var messagelist = mm.GetListDraftbox();
+            string p = (string)Session["WriterMail"];
+            var writeridinfo = vm.GetByWriterId(p);
+            var messagelist = mm.GetListDraftbox(p, "");
             return View(messagelist);
         }
         public ActionResult GetInboxMessageDetails(int id)
@@ -68,7 +75,8 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = messageValidator.Validate(p);
             if (results.IsValid)
             {
-                p.SenderMail = "admin@gmail.com";
+                p.SenderMail = (string)Session["WriterMail"];
+                var writeridinfo = vm.GetByWriterId(p.SenderMail);
                 p.MessageDate =DateTime.Parse(DateTime.Now.ToShortDateString());
                 if (btn == "Send")
                 {
@@ -100,7 +108,8 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = messageValidator.Validate(p);
             if (results.IsValid)
             {
-                p.SenderMail = "admin@gmail.com";
+                p.SenderMail = (string)Session["WriterMail"];
+                var writeridinfo = vm.GetByWriterId(p.SenderMail);
                 p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 if (btn == "Send")
                 {

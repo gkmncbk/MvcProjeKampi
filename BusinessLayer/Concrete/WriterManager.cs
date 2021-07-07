@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _writerDal = writerDal;
         }
 
+        //public Writer GetByWriter(string mail, string password)
+        //{
+        //    return _writerDal.GetByWriter(mail, password);
+        //}
+
         public Writer GetByID(int id)
         {
             return _writerDal.Get(x => x.WriterID == id);
@@ -41,6 +46,11 @@ namespace BusinessLayer.Concrete
         public void WriterUpdate(Writer writer)
         {
             _writerDal.Update(writer);
+        }
+
+        public int GetByWriterId(string mail)
+        {
+           return _writerDal.GetByWriterId(mail);
         }
     }
 }
